@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: react_frontend/app_shell
+title: 应用外壳与全局类型定义
+scope:
+    - src/App.tsx
+    - src/main.tsx
+    - src/types.ts
+    - src/styles/index.css
+source_files: []
+depends_on: []
+related_to:
+    - path: electron_runtime
+    - path: react_frontend/structure_drawing

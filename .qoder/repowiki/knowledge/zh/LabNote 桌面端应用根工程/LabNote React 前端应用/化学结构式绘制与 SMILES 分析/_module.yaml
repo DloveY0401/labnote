@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: react_frontend/structure_drawing
+title: 化学结构式绘制与 SMILES 分析
+scope:
+    - src/pages/StructureDraw.tsx
+    - src/components/MolCanvas.tsx
+    - src/utils/molEngine.ts
+    - src/utils/smilesParser.ts
+source_files: []
+depends_on: []
+related_to:
+    - path: react_frontend/app_shell
+    - path: react_frontend/experiments_projects

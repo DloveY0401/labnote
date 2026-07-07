@@ -1,0 +1,20 @@
+schema_version: 1
+module_path: react_frontend/shared_components
+title: 共享 UI 组件库
+scope:
+    - src/components/Layout.tsx
+    - src/components/Sidebar.tsx
+    - src/components/FilterBar.tsx
+    - src/components/TaskForm.tsx
+    - src/components/TaskItem.tsx
+    - src/components/CatalystForm.tsx
+    - src/components/SolventForm.tsx
+    - src/components/ReactantTable.tsx
+    - src/components/LinkedTasks.tsx
+    - src/components/TagSelector.tsx
+    - src/components/ConfirmDialog.tsx
+    - src/components/Toast.tsx
+    - src/components/StructureImage.tsx
+source_files: []
+depends_on: []
+related_to: []

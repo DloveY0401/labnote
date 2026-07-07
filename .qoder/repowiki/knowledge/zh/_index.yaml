@@ -1,0 +1,115 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+nodes_managed: true
+exported_at: "2026-07-03T12:59:46Z"
+modules:
+    "":
+        dir_name: LabNote 桌面端应用根工程
+        title: LabNote 桌面端应用根工程
+        scope:
+            - .gitignore
+            - config.json
+            - electron-builder.yml
+            - index.html
+            - package.json
+            - postcss.config.js
+            - tailwind.config.js
+            - tsconfig.json
+            - tsconfig.node.json
+            - vite.config.ts
+            - package-lock.json
+        source_files: []
+        children:
+            - electron_runtime
+            - react_frontend
+        depends_on: []
+        related_to: []
+    electron_runtime:
+        dir_name: Electron 主进程与渲染层桥接
+        title: Electron 主进程与渲染层桥接
+        scope:
+            - electron/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: react_frontend/app_shell
+            - path: react_frontend/experiments_projects
+    react_frontend:
+        dir_name: LabNote React 前端应用
+        title: LabNote React 前端应用
+        scope:
+            - src/
+        source_files: []
+        children:
+            - react_frontend/app_shell
+            - react_frontend/experiments_projects
+            - react_frontend/shared_components
+            - react_frontend/structure_drawing
+        depends_on: []
+        related_to: []
+    react_frontend/app_shell:
+        dir_name: 应用外壳与全局类型定义
+        title: 应用外壳与全局类型定义
+        scope:
+            - src/App.tsx
+            - src/main.tsx
+            - src/types.ts
+            - src/styles/index.css
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: electron_runtime
+            - path: react_frontend/structure_drawing
+    react_frontend/experiments_projects:
+        dir_name: 实验与课题管理页面
+        title: 实验与课题管理页面
+        scope:
+            - src/pages/ExperimentList.tsx
+            - src/pages/ExperimentEdit.tsx
+            - src/pages/ProjectDetail.tsx
+            - src/pages/ProjectManager.tsx
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: electron_runtime
+            - path: react_frontend/structure_drawing
+    react_frontend/shared_components:
+        dir_name: 共享 UI 组件库
+        title: 共享 UI 组件库
+        scope:
+            - src/components/Layout.tsx
+            - src/components/Sidebar.tsx
+            - src/components/FilterBar.tsx
+            - src/components/TaskForm.tsx
+            - src/components/TaskItem.tsx
+            - src/components/CatalystForm.tsx
+            - src/components/SolventForm.tsx
+            - src/components/ReactantTable.tsx
+            - src/components/LinkedTasks.tsx
+            - src/components/TagSelector.tsx
+            - src/components/ConfirmDialog.tsx
+            - src/components/Toast.tsx
+            - src/components/StructureImage.tsx
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    react_frontend/structure_drawing:
+        dir_name: 化学结构式绘制与 SMILES 分析
+        title: 化学结构式绘制与 SMILES 分析
+        scope:
+            - src/pages/StructureDraw.tsx
+            - src/components/MolCanvas.tsx
+            - src/utils/molEngine.ts
+            - src/utils/smilesParser.ts
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: react_frontend/app_shell
+            - path: react_frontend/experiments_projects

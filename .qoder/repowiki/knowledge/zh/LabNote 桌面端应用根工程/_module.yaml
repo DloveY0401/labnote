@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: ""
+title: LabNote 桌面端应用根工程
+scope:
+    - .gitignore
+    - config.json
+    - electron-builder.yml
+    - index.html
+    - package.json
+    - postcss.config.js
+    - tailwind.config.js
+    - tsconfig.json
+    - tsconfig.node.json
+    - vite.config.ts
+    - package-lock.json
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: react_frontend/experiments_projects
+title: 实验与课题管理页面
+scope:
+    - src/pages/ExperimentList.tsx
+    - src/pages/ExperimentEdit.tsx
+    - src/pages/ProjectDetail.tsx
+    - src/pages/ProjectManager.tsx
+source_files: []
+depends_on: []
+related_to:
+    - path: electron_runtime
+    - path: react_frontend/structure_drawing
