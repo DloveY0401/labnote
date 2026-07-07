@@ -1,0 +1,51 @@
+appId: com.labnote.app
+productName: LabNote
+directories:
+  output: release
+
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: resources/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  artifactName: LabNote-Setup-${version}.exe
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: LabNote
+
+afterPack: scripts/strip-locales.js
+
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - node_modules/**/*
+  - package.json
+  - "!node_modules/.cache/**/*"
+  - "!node_modules/typescript/**/*"
+  - "!node_modules/vite/**/*"
+  - "!node_modules/@vitejs/**/*"
+  - "!node_modules/rollup/**/*"
+  - "!node_modules/esbuild/**/*"
+  - "!node_modules/drizzle-kit/**/*"
+  - "!node_modules/electron-builder/**/*"
+  - "!node_modules/postcss/**/*"
+  - "!node_modules/tailwindcss/**/*"
+  - "!node_modules/autoprefixer/**/*"
+  - "!**/*.ts"
+  - "!**/*.map"
+  - "!**/*.md"
+
+asar: true
+
+asarUnpack:
+  - "node_modules/better-sqlite3/**/*"
+  - "dist/ketcher/**/*"
+
+npmRebuild: true
+
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/
